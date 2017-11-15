@@ -45,7 +45,9 @@ class App extends Component {
                     {page.name}
                   </List.Header>
                   <List.Description>
-                    {page.description} (link: <a href={page.homepage}>{page.homepage}</a>)
+                    {page.description}
+                    <br />
+                    link: <a href={page.homepage}>{page.homepage}</a>
                   </List.Description>
                 </List.Content>
               </List.Item>
