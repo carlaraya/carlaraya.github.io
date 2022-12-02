@@ -53,3 +53,5 @@ sass:
 
 plugins:
   - jekyll-feed
+
+destination: ./build
