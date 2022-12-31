@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="html" data-theme="light"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+
+
+
+  <title>
+    
+      Discord Text Data Analysis
+    
+  </title>
+
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Carl Araya" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  
+    <script type="text/javascript">
+  window.addEventListener('load', themeChange);
+  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+  if (currentTheme)
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+  function themeChange() {
+    let button = document.querySelector('.theme-toggle');
+
+    button.addEventListener('click', function (e) {
+      let currentTheme = document.documentElement.getAttribute('data-theme');
+      if (currentTheme === 'dark') {
+        transition();
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        transition();
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    let transition = () => {
+      document.documentElement.classList.add('transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('transition');
+      }, 1000);
+    }
+  }
+</script>
+
+
+  
+</head>
+<body>
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <header>
+        
+          <ul class="horizontal-list">
+  
+    <li>
+      <a href="/">
+        home
+      </a>
+      &nbsp;&nbsp;
+    </li>
+  
+    <li>
+      <a href="blog">
+        blog
+      </a>
+      &nbsp;&nbsp;
+    </li>
+  
+</ul>
+
+          <div class="dashed"></div>
+        
+        </header>
+        <h1 class="post-title">Discord Text Data Analysis</h1>
+<p class="post-date text-bold text-upcase">
+  
+  
+</p>
+
+<div class="soopr-btn"
+   data-twitter="SooprCo"
+>
+</div>
+
+
+<p class="post-date text-bold">
+  
+  
+  
+  202
+   Words, 
+  2 Minutes
+  
+</p>
+
+
+<p>A data analysis project, finding out which words and phrases a person uses too often or too rarely compared to the average English speaker.</p>
+
+<h2 id="motivation">Motivation</h2>
+<p>I am passionate about improving my English writing and speaking skills. One of the bad habits I try to avoid when writing is using certain words and phrases too often without a good reason.</p>
+
+<p>Therefore, I wanted to find out which words I was using too commonly (or too rarely) compared to the average English speaker. This data analysis project aims to find out just that.</p>
+
+<h2 id="process">Process</h2>
+
+<ol>
+  <li>Data Gathering &amp; Storage
+    <ol>
+      <li>I requested for my Discord message data as a ZIP archive of text files. Discord is an instant messaging platform which I have been actively using for more than 2 years now, so this is a good source of text data <img src="/images/discord-request-data.png" alt="asdf" /></li>
+      <li>Setup a PostgreSQL database Docker container.</li>
+      <li>Created the discord-to-postgresql Python library to parse the text data within the zipfile and store it in a PostgreSQL database</li>
+      <li>Downloaded a sample of English text from Google BigQuery’s public <a href="https://www.reddit.com/r/bigquery/comments/kyjqbt/there_used_to_be_a_dataset_of_reddit_comments_on/">Reddit comments dataset</a> and filtered out the comments with 300 or more words. This sample of English messages will be used as comparison.</li>
+      <li>Imported the sample to the already set-up PostgreSQL database.</li>
+    </ol>
+  </li>
+  <li>Data Cleaning &amp; Analysis
+    <ol>
+      <li>Installed Jupyter notebook and wrote Python code to query all data from the PostgreSQL database &amp; transform it to a list of sentences.</li>
+      <li>Used the <a href="https://github.com/jfilter/clean-text">clean-text</a> library for cleaning the sentences of any non-alphabetical characters https://github.com/jfilter/clean-text</li>
+      <li>Used the <a href="https://www.nltk.org/">Natural Language Toolkit</a> for tokenizing &amp; lemmatizing, aka converting the sentences to lists of words and converting the words into their root forms.</li>
+      <li>Generated frequency tables of all the words &amp; phrases appearing within both datasets. (shown in the Results section)</li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="architecture">Architecture</h3>
+
+<p><img src="/images/architecture-discord.png" alt="Project Architecture Image" /></p>
+
+<h2 id="results">Results</h2>
+
+<h3 id="most-used-words">Most used words</h3>
+
+<p><img src="/images/1grams.png" alt="1-grams results table image" /></p>
+
+<p>The 3rd column is what we’re interested in. Some words like “just” and “like” I indeed end up using a lot in conversations. Best not to use those words too often.</p>
+
+<h3 id="most-used-phrases">Most used phrases</h3>
+
+<p><img src="/images/2grams.png" alt="2-grams results table image" /></p>
+
+<p><img src="/images/3grams.png" alt="3-grams results table image" /></p>
+
+<p><img src="/images/4grams.png" alt="4-grams results table image" /></p>
+
+
+        
+          <button title="Toggle Theme" class="theme-toggle">
+  <svg viewBox="0 0 32 32" width="24" height="24" fill="currentcolor">
+    <circle cx="16" cy="16" r="14" fill="none" stroke="currentcolor" stroke-width="4"></circle>
+    <path d="
+             M 16 0
+             A 16 16 0 0 0 16 32
+             z">
+    </path>
+  </svg>
+</button>
+
+        
+        <div class="credits">&copy;&nbsp;2023&nbsp;Carl Araya
+          &nbsp;
+          •
+          &nbsp;Source code on <a href="https://github.com/carlaraya/carlaraya.github.io" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </main></body>
+</html>
