@@ -1,36 +1,58 @@
 navbar_entries:
   - title: home
     url: /
-
-  - title: blog
-    url: blog
+# - title: blog
+#   url: blog
 
 project_entries:
   - title: Shogi Clock
     url: https://shogi-clock.vercel.app
-    desc: A chess clock webapp made in ReactJS, Bootstrap 5 and Sass. Extensively uses React Hooks. Made with both mobile and desktop users in mind.
-    image: images/shogi-clock.png
+    desc: A chess clock webapp made in ReactJS and Bootstrap. Extensively uses React Hooks. Made with both mobile and desktop users in mind.
+    image: images/shogi-clock-orig.png
+    tags:
+      - ReactJS
+      - Bootstrap 5
+      - Sass
+      - NextJS
 
   - title: Discord Text Data Analysis
     url: discord-text-data-analysis
     desc: A data analysis project, finding out which words and phrases a person uses too often or too rarely compared to the average English speaker.
     image: images/2grams.png
+    tags:
+      - Python 3
+      - PostgreSQL
+      - Pandas
+      - Jupyter Notebook
+      - NLP
 
   - title: Health & Productivity Tracker
     url: https://github.com/carlaraya/health-productivity-tracker
     desc: An ETL pipeline & data visualization for my daily sleep & productivity score. Automatically updates daily.
     image: images/health-productivity-tracker.png
+    tags:
+      - Python 3
+      - Docker
+      - Airflow
+      - PostgreSQL
+      - Metabase
 
 old_project_entries:
   - title: Web Scraper
     url: https://github.com/justremember/kifu_crawler
     desc: Scrapy project that crawls for text files (kifu data) from certain websites. 
     image: images/web-scraper.png
+    tags:
+      - Python 3
+      - Scrapy
 
   - title: Magnus Effect Simulator
     url: https://github.com/carlaraya/magnus-sim/
     desc: Visualizing the effect of a ball's spin on its trajectory. CS 130 project.
     image: images/magnus-effect.png
+    tags:
+      - JavaScript
+      - Three.js
 
 footer_entries:
   - title: github

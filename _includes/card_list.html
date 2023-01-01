@@ -17,15 +17,18 @@
           {% endif %}
 
         </span>
-
-        <hr />
+      </a>
+        <div class="tags">
+          {% for tag in item.tags %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
 
         {% if item.desc != false %}
         <p class="body">
           {{ item.desc }}
         </p>
         {% endif %}
-      </a>
     </li>
 
   {% endfor %}

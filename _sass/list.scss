@@ -33,21 +33,36 @@ ul.horizontal-list {
     color: var(--links);
   }
 
-  .body {
-    font-size: 0.8em;
+  img {
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding-bottom: 0.5em;
   }
 
   hr {
     margin: 0.5em 0;
   }
 
-  img {
-    object-fit: cover;
-    aspect-ratio: 4 / 3;
-    width: 100%;
-    border-radius: 4px;
-    padding-bottom: 0.5em;
+  .tags {
+    span {
+      font-size: 0.8em;
+      padding: 4px;
+      color: var(--text-secondary);
+      background-color: var(--bg);
+      border-radius: 6px;
+      border: 1px solid var(--text);
+      white-space: nowrap;
+    }
   }
+
+  .body {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
 }
 
 /* Responsive cards - one column layout on small screens */
