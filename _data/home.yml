@@ -61,5 +61,5 @@ footer_entries:
   - title: linkedin
     url: https://www.linkedin.com/in/carl-araya/
 
-  - title: feed
-    url: feed.xml
+# - title: feed
+#   url: feed.xml
