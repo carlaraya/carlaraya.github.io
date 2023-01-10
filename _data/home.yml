@@ -46,7 +46,7 @@ old_project_entries:
       - Python 3
       - Scrapy
 
-  - title: Magnus Effect Simulator
+  - title: Magnus Effect Physics Simulator
     url: https://github.com/carlaraya/magnus-sim/
     desc: Visualizing the effect of a ball's spin on its trajectory. CS 130 project.
     image: images/magnus-effect.png
