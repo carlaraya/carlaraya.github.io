@@ -43,5 +43,3 @@ The 3rd column is what we're interested in. Some words like "just" and "like" I 
 
 
 ![3-grams results table image](/images/3grams.png)
-
-![4-grams results table image](/images/4grams.png)
