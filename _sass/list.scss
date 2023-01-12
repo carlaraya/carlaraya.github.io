@@ -33,7 +33,7 @@ ul.horizontal-list {
     color: var(--links);
   }
 
-  img {
+  .card-image {
     object-fit: cover;
     aspect-ratio: 4 / 3;
     width: 100%;
@@ -42,8 +42,13 @@ ul.horizontal-list {
     padding-bottom: 0.5em;
   }
 
-  hr {
-    margin: 0.5em 0;
+  .card-title {
+    margin: 10px 0 4px 0;
+    line-height: normal;
+    &.external:after {
+      content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+      margin: 0 3px 0 5px;
+    }
   }
 
   .tags {

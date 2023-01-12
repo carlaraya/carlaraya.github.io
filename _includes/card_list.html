@@ -6,11 +6,11 @@
         <span class="header">
           {% if item.image %}
           <div class="img-container">
-            <img src="{{ item.image }}"></img>
+            <img class="card-image" src="{{ item.image }}"></img>
           </div>
           {% endif %}
 
-          {{ item.title }}
+          <div class="card-title {% if item.is_external %}external{% endif %}">{{ item.title }}</div>
 
           {% if item.highlight %}
             <mark>{{ item.highlight }}</mark>

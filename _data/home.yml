@@ -7,6 +7,7 @@ navbar_entries:
 project_entries:
   - title: Shogi Clock
     url: https://shogi-clock.vercel.app
+    is_external: true
     desc: A chess clock webapp made in ReactJS and Bootstrap. Extensively uses React Hooks. Made with both mobile and desktop users in mind.
     image: images/shogi-clock-orig.png
     tags:
@@ -28,6 +29,7 @@ project_entries:
 
   - title: Health & Productivity Tracker
     url: https://github.com/carlaraya/health-productivity-tracker
+    is_external: true
     desc: An ETL pipeline & data visualization for my daily sleep & productivity score. Automatically updates daily.
     image: images/health-productivity-tracker.png
     tags:
@@ -40,6 +42,7 @@ project_entries:
 old_project_entries:
   - title: Web Scraper
     url: https://github.com/justremember/kifu_crawler
+    is_external: true
     desc: Scrapy project that crawls for text files (kifu data) from certain websites. 
     image: images/web-scraper.png
     tags:
@@ -48,6 +51,7 @@ old_project_entries:
 
   - title: Magnus Effect Physics Simulator
     url: https://github.com/carlaraya/magnus-sim/
+    is_external: true
     desc: Visualizing the effect of a ball's spin on its trajectory. CS 130 project.
     image: images/magnus-effect.png
     tags:
