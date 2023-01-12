@@ -93,17 +93,19 @@
 
 <h2 id="process">Process</h2>
 
-<ol>
-  <li>Data Gathering &amp; Storage
+<ul>
+  <li>I. Data Gathering &amp; Storage
     <ol>
-      <li>I requested for my Discord message data as a ZIP archive of text files. Discord is an instant messaging platform which I have been actively using for more than 2 years now, so this is a good source of text data <img src="/images/discord-request-data.png" alt="asdf" /></li>
+      <li>I requested for my Discord message data as a ZIP archive of text files. Discord is an instant messaging platform which I have been actively using for more than 2 years now, so this is a good source of text data.
+ <img src="/images/discord-request-data.png" alt="" /></li>
       <li>Setup a PostgreSQL database Docker container.</li>
-      <li>Created the discord-to-postgresql Python library to parse the text data within the zipfile and store it in a PostgreSQL database</li>
+      <li>Created the discord-to-postgresql Python library to parse the text data within the zipfile and store it in a PostgreSQL database. Here is one of the many CSV text files contained within the zip archive.
+ <img src="/images/messages-csv.png" alt="" /></li>
       <li>Downloaded a sample of English text from Google BigQuery’s public <a href="https://www.reddit.com/r/bigquery/comments/kyjqbt/there_used_to_be_a_dataset_of_reddit_comments_on/">Reddit comments dataset</a> and filtered out the comments with 300 or more words. This sample of English messages will be used as comparison.</li>
       <li>Imported the sample to the already set-up PostgreSQL database.</li>
     </ol>
   </li>
-  <li>Data Cleaning &amp; Analysis
+  <li>II. Data Cleaning &amp; Analysis
     <ol>
       <li>Installed Jupyter notebook and wrote Python code to query all data from the PostgreSQL database &amp; transform it to a list of sentences.</li>
       <li>Used the <a href="https://github.com/jfilter/clean-text">clean-text</a> library for cleaning the sentences of any non-alphabetical characters https://github.com/jfilter/clean-text</li>
@@ -111,7 +113,7 @@
       <li>Generated frequency tables of all the words &amp; phrases appearing within both datasets. (shown in the Results section)</li>
     </ol>
   </li>
-</ol>
+</ul>
 
 <h3 id="architecture">Architecture</h3>
 
@@ -131,9 +133,16 @@
 
 <p><img src="/images/3grams.png" alt="3-grams results table image" /></p>
 
+<p>Some notable phrases that appear: “I want to”, “is there a”, “but I”, “I want”, “I can”. (Seems like I talk to myself a little too much compared to the average English speaker).</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This data analysis project was informative and useful to me, to say the least. Through gathering and analyzing and generating frequency tables of words and phrases, I was able to identify specific words and phrases that I tend to overuse in my conversations. This information will be useful in helping me to improve my English writing and speaking skills. Overall, this data analysis project was a valuable tool for self-reflection and personal improvement.</p>
 
 
-<a href="/">Return to homepage</a>
+<p class="return-to-homepage">
+  <a href="/">Return to homepage</a>
+</p>
 
         
           <button title="Toggle Theme" class="theme-toggle">
