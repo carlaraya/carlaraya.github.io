@@ -45,6 +45,3 @@ The 3rd column is what we're interested in. Some words like "just" and "like" I 
 ![3-grams results table image](/images/3grams.png)
 
 
-## Conclusion
-
-Looking at the results in the 2- and 3-grams tables, phrases that appear include "I don't", "but I", and "I want to". And so it seems that I talk about myself a little too often compared to the average English speaker...
